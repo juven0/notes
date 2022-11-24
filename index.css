@@ -1,0 +1,236 @@
+
+body{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 247, 228);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.main{
+    display: flex;
+    flex-direction : row;
+    width: 100%;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100vh;
+}
+
+/* part navigation */
+
+.navigation{
+    position: relative;
+    max-width: 120px;
+    width: 120px;
+    height: 100vh;
+    border-right : 1px solid rgb(228, 226, 226);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navigation .logo{
+    margin-top: 20px;
+}
+.navigation .logo label{
+    font-size: 30px;
+    font-weight: 700;
+}
+.navigation .nav-btn{
+    filter: url(#gooey-effect);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.nav-btn .controle{
+    filter: url(#gooey-effect);
+    position: relative;
+    display: flex;
+    margin-top: 50px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+    z-index: 100;
+}
+.controle  button {
+        z-index: 21;
+        border-radius: 100%;
+        background: #000;
+        border: none;
+        height: 56px;
+        width: 56px;
+        outline: none;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+.controle label{
+    position: relative;
+    margin: 0;
+    color: white;
+    font-size: 30px;
+}
+.note-selectors {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      z-index: 10;
+      margin-top: -24px;
+      flex-direction: column;
+      align-items: center;
+}
+.color-palet{
+     position: absolute;
+    margin: 0px auto;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    top: -20px;
+    opacity: 0;
+    border-radius: 100%;
+    cursor: pointer;
+}
+ .first {
+    background: #ffcf7d;
+    z-index: 10;
+    opacity: 1;
+}
+.second {
+    z-index: 9;
+    background: #f0a177;
+    }
+.third {
+    z-index: 8;
+    background: #b095f6;
+}
+.fourth {
+    z-index: 7;
+    background: #55cffa;
+}
+.fifth {
+    z-index: 6;
+    background: #e6ee96;
+}
+
+
+/* part content */
+
+.content{
+    position: relative;
+    width: calc(90% - 120px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.content .searche-bar{
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+}
+.searche-bar .search-icon{
+    position: relative;
+     margin-left: 100px;
+}
+.searche-bar input{
+    position: relative;
+    margin-left: 20px;
+    border: none;
+    width: 300px;
+    max-width: 400px;
+    outline: none;
+    background: none;
+    font-size: 25px;
+    color: rgb(174, 175, 175);
+}
+.searche-bar input::placeholder{
+    color: rgb(208, 212, 212);
+}
+.content-titel{
+    font-size: 40px;
+    font-weight: 700;
+    margin-left: 100px;
+}
+
+/* note card */
+.note-content{
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    padding: 25px;
+}
+.note-content .card{
+    width: 300px;
+    height: 300px;
+    max-width: 300px;
+    background-color: rgb(255, 217, 153);
+    margin: 20px;
+    border-radius: 20px;
+}
+.card .note-text{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    height:200px;
+}
+.note-text p{
+    color: rgb(124, 124, 124);
+    font-size: 22px;
+    font-weight: 500;
+}
+.note-text .input-note{
+    position: relative;
+    outline: none;
+    background: none;
+    border: none;
+    height:auto;
+    max-height: 200px;
+    width: 85%;
+    font-size: 22px;
+    font-weight: 500;
+    color: rgb(124, 124, 124);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/* edit card */
+.card .note-edit{
+    width: 100%;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.note-edit .date{
+    position :relative;
+    max-width: 60%;
+    width: auto;
+    margin-left: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(66, 66, 66);
+}
+.note-edit .edit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:absolute ; 
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #111;
+    left: 270px;
+}

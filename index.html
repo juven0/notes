@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="navigation">
+            <div class="logo">
+                <label for="">bird</label>
+            </div>
+            <div class="nav-btn">
+                <div class="controle">
+                    <button id="addNote" class="btn">
+                        <img src="./icons/plus.svg" alt="" srcset="">
+                    </button>
+                </div>
+                <div class="note-selectors">
+                <div 
+                    class="color-palet first"
+                    data-from="0" 
+                    data-to="80"
+                ></div>
+                <div 
+                    class="color-palet second other"
+                    data-from="100" 
+                    data-to="140"
+                ></div>
+                <div 
+                    class="color-palet third other"
+                    data-from="160"
+                    data-to="200"
+                ></div>
+                <div 
+                    class="color-palet fourth other"
+                    data-from="220"
+                    data-to="260"
+                ></div>
+                <div 
+                    class="color-palet fifth other"
+                    data-from="280"
+                    data-to="320"
+                ></div>
+                </div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <defs>
+                    <filter id="gooey-effect">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -9"
+                            result="gooey-effect" />
+                        <feComposite in="SourceGraphic" in2="gooey-effect" operator="atop" />
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+        <div class="content">
+            <section >
+                <div class="searche-bar">
+                    <div class="search-icon">
+                        <img src="./icons/search.svg" alt="" srcset="">
+                    </div>
+                    <input type="text" name="recherche" id="searche" placeholder="Search">
+                </div>
+                <label for="" class="content-titel">Notes</label>
+            </section>
+            <section class="note-content">
+                    <div class="card">
+                        <div class="note-text">
+                            <textarea name="" id="" cols="30" rows="10" class="input-note" value = "mon tout premier note">mon tout premier note</textarea>
+                            <!-- <p class="note"> mon tout premier note </p> -->
+                        </div>
+                        <div class="note-edit">
+                            <div class="date">sept 02, 2022</div>
+                            <div class="edit">
+                                <img src="./icons/edit.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+            </section>
+        </div>
+    </div>
+    <script src="./scrypt/anime.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
